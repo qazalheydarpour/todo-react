@@ -1,23 +1,88 @@
-import logo from './logo.svg';
-import './App.css';
+// ****************************************in this solution we use state **************************************************************************
+import { useState } from "react";
+import data, { RandomId } from "./data";
+import  Header from './components/header/Header'
+import TodoCard from './components/TodoCard/TodoCard'
+import "./App.css";
 
 function App() {
+  const [todo, setTodo] = useState(data);
+  //.............................................................
+  const handelAddTodoList = () => {
+    const name = prompt("enter name");
+    const description = prompt("enter desc");
+    const title = prompt("enter title");
+    setTodo([...todo, { id: RandomId(), name, description, items: [] }]);
+  };
+  //.............................................................
+  const handelDeleteTodoList = (id) => {
+    setTodo(todo.filter((todo) => todo.id !== id));
+  };
+  //.............................................................
+  const handelAddTodoItem = (id) => {
+    const title = prompt("enter your new item");
+    setTodo(
+      todo.map((todo) =>
+        todo.id == id
+          ? {
+              ...todo,
+              items: [...todo.items, { id: RandomId(), title, status: false }],
+            }
+          : todo
+      )
+    );
+  };
+  //.............................................................
+  const handelUpdateTodoItemStatus = (itemId, todoId, e) => {
+    setTodo(
+      todo.map((todo) =>
+        todo.id == todoId
+          ? {
+              ...todo,
+              items: todo.items.map((item) =>
+                item.id == itemId
+                  ? {
+                      ...item,
+                      status: e.target.checked,
+                    }
+                  : item
+              ),
+            }  
+          : todo
+      )
+    );
+  };
+  //.............................................................
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="appBody">
+      <Header />
+      <div className="add-item-container container" onClick={handelAddTodoList}>
+        <div>
+          <img
+            src={require("./img/icons8-add-50.png")}
+            
+          />
+        </div>
+        <div>
+          <p>ADD NEW TASK</p>
+        </div>
+      </div> 
+          <div className="App">
+            {/* <div className='card-container'> */}
+            {todo.map((todo) => (
+              <TodoCard
+                todo={todo}
+                key={todo.id}
+                handelDeleteTodoList={handelDeleteTodoList}
+                handelUpdateTodoItemStatus={handelUpdateTodoItemStatus}
+                handelAddTodoItem={handelAddTodoItem}
+              />
+            ))}
+            {/* </div> */}
+            
+          </div>
+          <br/>
     </div>
   );
 }

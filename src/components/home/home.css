@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+
+ .global-container {
+        font-family: 'Quicksand', sans-serif;
+        color: white;
+        background-image: url('https://images.creativemarket.com/0.1.0/ps/10225359/600/400/m2/fpnw/wm0/tile-5-b-.jpg?1618921879&s=aaaf54d81858353b9a29b674a6d13cab&fmt=webp');
+        /* background-image: url('./img/Lovepik.jpg'); */
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        font-size: 10px;
+        overflow: hidden;
+    }
+    
+    .h-container {
+        z-index: 1;
+        float: left;
+        text-align: center;
+        min-width: 80%;
+        height: 30rem;
+        margin: 3rem;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+        position: relative;
+        background: inherit;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    
+    .h-container:before {
+        content: "";
+        position: absolute;
+        background: inherit;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .3);
+        filter: blur(5px);
+        margin: -20px;
+        z-index: -1;
+    }
+    
+    .obj1 {
+        width: 10rem;
+        margin-top: 5rem;
+    
+    }
+    
+    .obj2 {
+        margin-left: -10%;
+        margin-top: -20%;
+        width: 25rem;
+        text-align: right;
+        z-index: 1;
+        position: relative;
+    }
+    
+    .menu {
+        float: left;
+        margin: 1rem 0 0 5rem;
+    }
+    
+    .menu span {
+        margin-left: 3rem;
+    }
+    
+    .button {
+        float: right;
+        margin: 1rem 2rem 0 0;
+    }
+    
+    .button span {
+        background: rgba(46, 49, 49, 0.3);
+        padding: 0.4rem;
+        border-radius: 5rem;
+        margin-left: 0.5rem;
+    }
+    
+    .title {
+        text-align: left;
+        clear: both;
+        margin-left: 8rem;
+        margin-top: 10rem;
+        font-size: 2rem;
+    }
+    
+    .text {
+        text-align: left;
+        clear: both;
+        margin-left: 8rem;
+    
+    }
+    .main-button{
+        width: 8rem;
+        text-align: left;
+        clear: both;
+        margin-left: 8rem;
+        margin-top: 2rem;
+        background-color: white;
+        font-size: 0.8rem;
+        color: black;
+        border-radius: 5rem;
+        animation-iteration-count: 100;
+
+        cursor: pointer;
+    }
+    .main-button p{
+        text-align: center;
+        padding: 0.4rem;
+    
+    }
+    .container-3d{
+        z-index: 2;
+        margin-left: -10%;
+        margin-top: 10%;
+    }
+    .global-container{
+        display: flex;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }

@@ -1,0 +1,16 @@
+.todoname{
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+}
+.tododesc{
+    color: white;
+    font-weight: lighter;
+    margin-top: -20px;
+}
+.addnewtext{
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}

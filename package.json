@@ -1,7 +1,7 @@
 {
   "name": "todo",
   "version": "0.1.0",
-  "homepage": "https://qazalheydarpour.github.io/todo-react",
+  "homepage": "https://qazalheydarpour.github.io/todo-react/",
   "main": "index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",

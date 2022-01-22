@@ -103,7 +103,6 @@
         color: black;
         border-radius: 5rem;
         animation-iteration-count: 100;
-
         cursor: pointer;
     }
     .main-button p{
@@ -122,4 +121,32 @@
     a{
         text-decoration: none;
         color: black;
+    }
+    @media screen and (max-width: 600px) {
+        .h-container {
+            z-index: 1;
+            float: center;
+            text-align: center;
+        }
+        .menu{
+            display: none;
+        }
+        .title {
+            text-align: center;
+            margin: 20% 10%;
+            clear: both;
+            font-size: 2rem;
+        }
+        .main-button{
+            margin: 10% auto;
+        }
+        .global-container{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        .container-3d{
+            z-index: 2;
+            margin-top :-50% ;
+            margin-left :40% ;
+        }
     }

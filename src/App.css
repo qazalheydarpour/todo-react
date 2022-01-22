@@ -93,3 +93,8 @@
 ::-webkit-scrollbar-thumb:hover {
   background:lightslategrey; 
 }
+@media screen and (max-width: 800px) {
+  .App {
+    grid-template-columns: 1fr ;
+  }
+}

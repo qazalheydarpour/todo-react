@@ -29,7 +29,7 @@ const Home = () => {
 
         <div className="animate__pulse animate__animated main-button">
               <p>
-              <a href={'/todo'}>Start Free Trial</a>   
+              <a href={'/todo-react/todo'}>Start Free Trial</a>   
               </p>  
         </div>
     </div>

@@ -2,6 +2,8 @@ import React from 'react'
 import './home.css'
 import 'animate.css'
 import App from '../../App'
+import {HashRouter,Route,Routes,Link} from 'react-router-dom'
+
 
 const Home = () => {
     return (
@@ -29,7 +31,7 @@ const Home = () => {
 
         <div className="animate__pulse animate__animated main-button">
               <p>
-              <a href={'/todo'}>Start Free Trial</a>   
+              <Link to='/todo'>Start Free Trial</Link>   
               </p>  
         </div>
     </div>
@@ -51,7 +53,12 @@ const Home = () => {
               <p className='addnewtext' >+ ADD NEW ITEM</p>
               </div>
     </div>
-</div>
+    {/* <HashRouter> */}
+      <Routes>
+        <Route exact path='/home' element={<App/>}/>
+      </Routes>
+    {/* </HashRouter> */}
+            </div>
     )
 }
 

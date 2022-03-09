@@ -4,17 +4,14 @@ import './index.css';
 import App from './App';
 import Home from './components/home/Home';
 import reportWebVitals from './reportWebVitals';
-import {HashRouter as BrowserRouter,Route,Routes} from 'react-router-dom'
+import {HashRouter,Route,Routes} from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route exact path='/' element={<Home/>}/>
-        <Route  path='/todo' element={<App/>}/>
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>,
+    <HashRouter>
+      <App/>
+    </HashRouter>
+   </React.StrictMode>, 
   document.getElementById('root')
 );
 

@@ -10,7 +10,7 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route exact path='/' element={<Home/>}/>
+        <Route exact path='/todo-react' element={<Home/>}/>
         <Route  path='/todo' element={<App/>}/>
       </Routes>
     </BrowserRouter>

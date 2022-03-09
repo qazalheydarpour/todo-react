@@ -8,7 +8,7 @@ const App = () => {
     <div>
       <Routes basename='/todo-react'>
         <Route exact path='/' element={<Home/>}/>
-        <Route  path='/#/todo' element={<Todo/>}/>
+        <Route  path='/todo' element={<Todo/>}/>
       </Routes>
     </div>
   )
